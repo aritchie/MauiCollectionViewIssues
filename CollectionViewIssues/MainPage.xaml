@@ -17,14 +17,14 @@
                         ItemSizingStrategy="MeasureAllItems">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="collectionviewissues:SettingsModel">
-
+                    <Grid Margin="0,1,0,0">
                         <Border Margin="0,7,0,0" HeightRequest="{Binding Height}" BackgroundColor="Black">
                             <Grid Margin="16" RowSpacing="8" RowDefinitions="*,*">
                                 <Label Grid.Row="0" Text="{Binding Title}" TextColor="White"/>
                                  <Entry Grid.Row="1" Text ="{Binding Value}" TextColor="White"/>
                             </Grid>
                         </Border>
-
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

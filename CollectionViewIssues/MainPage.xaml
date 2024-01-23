@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:collectionviewissues="clr-namespace:CollectionViewIssues"
+             Shell.BackgroundColor="Black"
+             Shell.TitleColor="White"   
+             BackgroundColor="Black"
+             x:Class="CollectionViewIssues.MainPage">
+
+    <StackLayout>
+        <Label Text="Example scrolling issue" TextColor="White" />
+        <CollectionView ItemsSource="{Binding SettingsList}"
+                        Margin="8,0"
+                        HorizontalOptions="FillAndExpand"
+                        
+                        VerticalOptions="FillAndExpand"
+                        ItemSizingStrategy="MeasureAllItems">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="collectionviewissues:SettingsModel">
+                    <StackLayout Margin="0,1,0,0">
+                        <Frame Margin="0,7,0,0" BorderColor="White" HeightRequest="{Binding Height}" BackgroundColor="Black">
+                            <StackLayout Margin="16" Spacing="8">
+                                <Label Text="{Binding Title}" TextColor="White"/>
+                                <StackLayout>
+                                    <Entry Text ="{Binding Value}" TextColor="White"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                        </Frame>
+
+                    </StackLayout>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </StackLayout>
+
+</ContentPage>
+

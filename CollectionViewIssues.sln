@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionViewIssues", "CollectionViewIssues\CollectionViewIssues.csproj", "{1CD49E98-E802-4BBD-93EF-39BA4E4D9390}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{894C4341-E193-4E44-B62D-415CDCD318A7}"
+	ProjectSection(SolutionItems) = preProject
+		Simulator Screen Recording - iPhone 15 Pro Max - 2024-01-23 at 11.07.50.mp4 = Simulator Screen Recording - iPhone 15 Pro Max - 2024-01-23 at 11.07.50.mp4
+		Simulator Screen Recording - iPhone SE %283rd generation%29 - 2024-01-23 at 11.06.46.mp4 = Simulator Screen Recording - iPhone SE %283rd generation%29 - 2024-01-23 at 11.06.46.mp4
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CD49E98-E802-4BBD-93EF-39BA4E4D9390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD49E98-E802-4BBD-93EF-39BA4E4D9390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD49E98-E802-4BBD-93EF-39BA4E4D9390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD49E98-E802-4BBD-93EF-39BA4E4D9390}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FDEBEF6-81A2-4F9D-8D73-DC15C09B5E2F}
+	EndGlobalSection
+EndGlobal

@@ -7,36 +7,27 @@
              BackgroundColor="Black"
              x:Class="CollectionViewIssues.MainPage">
 
-    <StackLayout>
-        <Label Text="Example scrolling issue" TextColor="White" />
+    <Grid VerticalOptions="FillAndExpand" RowDefinitions="Auto,*">
+        <Label Text="Example scrolling issue" TextColor="White" Grid.Row="0" />
         <CollectionView ItemsSource="{Binding SettingsList}"
                         Margin="8,0"
-                        HorizontalOptions="FillAndExpand"
-                        
-                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="Fill"
+                        Grid.Row="1"
+                        VerticalOptions="Fill"
                         ItemSizingStrategy="MeasureAllItems">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="collectionviewissues:SettingsModel">
-                    <StackLayout Margin="0,1,0,0">
-                        <Frame Margin="0,7,0,0" BorderColor="White" HeightRequest="{Binding Height}" BackgroundColor="Black">
-                            <StackLayout Margin="16" Spacing="8">
-                                <Label Text="{Binding Title}" TextColor="White"/>
-                                <StackLayout>
-                                    <Entry Text ="{Binding Value}" TextColor="White"/>
-                                </StackLayout>
-                            </StackLayout>
 
-                        </Frame>
-
-                    </StackLayout>
+                        <Border Margin="0,7,0,0" HeightRequest="{Binding Height}" BackgroundColor="Black">
+                            <Grid Margin="16" RowSpacing="8" RowDefinitions="*,*">
+                                <Label Grid.Row="0" Text="{Binding Title}" TextColor="White"/>
+                                 <Entry Grid.Row="1" Text ="{Binding Value}" TextColor="White"/>
+                            </Grid>
+                        </Border>
 
                 </DataTemplate>
-
             </CollectionView.ItemTemplate>
-
         </CollectionView>
-
-    </StackLayout>
-
+    </Grid>
 </ContentPage>
 

@@ -7,7 +7,7 @@ namespace CollectionViewIssues
 {
 	public class MainPageVM : INotifyPropertyChanged
 	{
-        public ObservableCollection<SettingsModel> SettingsList { get; set; } = new();
+        public List<SettingsModel> SettingsList { get; set; } = new();
 
         public MainPageVM()
 		{

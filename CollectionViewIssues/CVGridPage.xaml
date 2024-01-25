@@ -21,13 +21,22 @@
                     CommandParameter="3" />
         </HorizontalStackLayout>
 
-        <CollectionView ItemsSource="{Binding List}"
+        <CollectionView x:Name="cv"
+                        ItemsSource="{Binding List}"
                         Margin="8,0"
                         Grid.Row="1">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical"
+                                 Span="2" />
+            </CollectionView.ItemsLayout>
+            <!--
+            CRASHES
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout x:Name="layout"
+                                 Orientation="Vertical"
                                  Span="{Binding Columns}" />
             </CollectionView.ItemsLayout>
+            -->
 
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="collectionviewissues:SettingsModel">

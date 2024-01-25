@@ -22,23 +22,26 @@
         </HorizontalStackLayout>
 
         <sho:CollectionView ItemsSource="{Binding List}" 
-                            ColumnCount="2"
                             CurrentIndex="0"
-                            CollectionPadding="10,30,10,75"
+                            ColumnCount="{Binding Columns}"
+                            CollectionPadding="0"
                             CollectionLayout="Grid"
-                            ItemHeight="120"
-                            ItemWidth="120"
-                            Margin="8,0"
+                            ItemHeight="180"
+                            ItemWidth="180"
                             Grid.Row="1">
 
             <sho:CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="collectionviewissues:SettingsModel">
-                    <Border Margin="0,7,0,0" BackgroundColor="Black">
-                        <Grid RowDefinitions="Auto, Auto">
-                            <Label Grid.Row="0" Text="{Binding Title}" TextColor="White"/>
-                            <Entry Grid.Row="1" Text ="{Binding Value}" TextColor="White"/>
-                        </Grid>
-                    </Border>
+                    <sho:DraggableViewCell x:Name="DraggableViewCell">
+                        <ContentView>
+                            <Border Margin="10" BackgroundColor="Black">
+                                <Grid RowDefinitions="Auto, Auto">
+                                    <Label Grid.Row="0" Text="{Binding Title}" TextColor="White"/>
+                                    <Entry Grid.Row="1" Text ="{Binding Value}" TextColor="White"/>
+                                </Grid>
+                            </Border>
+                        </ContentView>
+                    </sho:DraggableViewCell>
                 </DataTemplate>
             </sho:CollectionView.ItemTemplate>
         </sho:CollectionView>

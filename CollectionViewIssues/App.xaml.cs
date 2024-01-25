@@ -7,7 +7,8 @@ public partial class App : Application
 		InitializeComponent();
 
         //MainPage = new AppShell();
-        MainPage = new SharpnadoGridPage();
+        //MainPage = new SharpnadoGridPage();
+        MainPage = new CVGridPage();
     }
 }
 

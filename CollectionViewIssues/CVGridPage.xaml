@@ -2,18 +2,33 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:collectionviewissues="clr-namespace:CollectionViewIssues"
-             Shell.BackgroundColor="Black"
-             Shell.TitleColor="White"   
-             BackgroundColor="Black"
-             x:DataType="collectionviewissues:DynamicSizeViewModel"
-             x:Class="CollectionViewIssues.MainPage">
+             x:DataType="collectionviewissues:GridViewModel"
+             x:Class="CollectionViewIssues.CVGridPage"
+             Title="CV Grid">
 
     <Grid VerticalOptions="FillAndExpand" RowDefinitions="Auto,*">
-        <Label Text="Example scrolling issue" TextColor="White" Grid.Row="0" />
-        <CollectionView ItemsSource="{Binding SettingsList}"
+        <HorizontalStackLayout Grid.Row="0">
+            <Button Text="1"
+                    Command="{Binding Change}"
+                    CommandParameter="1" />
+
+            <Button Text="2"
+                    Command="{Binding Change}"
+                    CommandParameter="2" />
+
+            <Button Text="3"
+                    Command="{Binding Change}"
+                    CommandParameter="3" />
+        </HorizontalStackLayout>
+
+        <CollectionView ItemsSource="{Binding List}"
                         Margin="8,0"
-                        Grid.Row="1"
-                        ItemSizingStrategy="MeasureAllItems">
+                        Grid.Row="1">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="{Binding Columns}" />
+            </CollectionView.ItemsLayout>
+
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="collectionviewissues:SettingsModel">
                     <Border Margin="0,7,0,0" HeightRequest="{Binding Height}" BackgroundColor="Black">
@@ -27,4 +42,3 @@
         </CollectionView>
     </Grid>
 </ContentPage>
-

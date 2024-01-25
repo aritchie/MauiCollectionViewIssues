@@ -3,9 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:collectionviewissues="clr-namespace:CollectionViewIssues"
              xmlns:vlv="clr-namespace:Microsoft.Maui.Controls;assembly=VirtualListView"
-             x:DataType="collectionviewissues:VirtualListViewModel"
-             x:Class="CollectionViewIssues.VirtualListViewPage"
-             Title="VirtualListViewPage">
+             x:DataType="collectionviewissues:DynamicSizeViewModel"
+             x:Class="CollectionViewIssues.VirtualListViewPage">
 
     <Grid VerticalOptions="FillAndExpand" RowDefinitions="Auto,*">
         <Label Text="Example scrolling issue" TextColor="White" Grid.Row="0" />

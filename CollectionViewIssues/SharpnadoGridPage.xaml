@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:collectionviewissues="clr-namespace:CollectionViewIssues" xmlns:sho="http://sharpnado.com"
+             x:DataType="collectionviewissues:GridViewModel"
+             x:Class="CollectionViewIssues.SharpnadoGridPage"
+             Title="Sharpnado Grid">
+
+    <Grid VerticalOptions="FillAndExpand" RowDefinitions="Auto,*">
+        <HorizontalStackLayout Grid.Row="0">
+            <Button Text="1"
+                    Command="{Binding Change}"
+                    CommandParameter="1" />
+
+            <Button Text="2"
+                    Command="{Binding Change}"
+                    CommandParameter="2" />
+
+            <Button Text="3"
+                    Command="{Binding Change}"
+                    CommandParameter="3" />
+        </HorizontalStackLayout>
+
+        <sho:CollectionView ItemsSource="{Binding List}" 
+                            ColumnCount="2"
+                            CurrentIndex="0"
+                            CollectionPadding="10,30,10,75"
+                            CollectionLayout="Grid"
+                            ItemHeight="120"
+                            ItemWidth="120"
+                            Margin="8,0"
+                            Grid.Row="1">
+
+            <sho:CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="collectionviewissues:SettingsModel">
+                    <Border Margin="0,7,0,0" BackgroundColor="Black">
+                        <Grid RowDefinitions="Auto, Auto">
+                            <Label Grid.Row="0" Text="{Binding Title}" TextColor="White"/>
+                            <Entry Grid.Row="1" Text ="{Binding Value}" TextColor="White"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </sho:CollectionView.ItemTemplate>
+        </sho:CollectionView>
+    </Grid>
+</ContentPage>
